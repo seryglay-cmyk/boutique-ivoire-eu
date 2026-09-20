@@ -1,0 +1,30 @@
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 10000;
+
+app.get('/', (req,res)=>{res.send(`<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique Ivoire</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFF8F0;font-family:Poppins,sans-serif;text-align:center;padding:15px}
+.logo{font-family:Pacifico,cursive;font-size:72px;line-height:0.85}
+.b{color:#FF7A00;text-shadow:4px 0 0 #fff,-4px 0 0 #fff,0 4px 0 #fff,0 -4px 0 #fff}
+.i{color:#0A5C36;text-shadow:4px 0 0 #fff,-4px 0 0 #fff,0 4px 0 #fff,0 -4px 0 #fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:520px;margin:28px auto}
+.card{background:#fff;border-radius:18px;padding:15px;border-left:5px solid #FF7A00;border-right:5px solid #0A5C36;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.btn{display:inline-block;background:#25D366;color:#fff;padding:16px 32px;border-radius:50px;text-decoration:none;font-weight:700;font-size:18px;margin-top:20px}
+</style></head><body>
+<div style="margin-top:25px"><div class="logo"><span class="b">Boutique</span><br><span class="i">Ivoire</span></div>
+<div style="letter-spacing:4px;font-size:11px;color:#8B5A2B;font-weight:700;margin-top:8px">~ ARTISANAL • ORGANIC • PREMIUM ~</div></div>
+<div class="grid">
+<div class="card">🌿<br><b>Karité Korhogo</b><br>100% pur<br><b style="color:#0A5C36">4500 FCFA</b></div>
+<div class="card">🫒<br><b>Huile Rouge</b><br>Man Biankouma<br><b style="color:#0A5C36">3000 FCFA/L</b></div>
+<div class="card">👘<br><b>Pagnes</b><br>Sénoufo Baoulé Bété<br><b style="color:#0A5C36">15000 FCFA</b></div>
+<div class="card">🥜<br><b>Arachide Nord</b><br>Grillée<br><b style="color:#0A5C36">2500 FCFA/kg</b></div>
+</div>
+<a class="btn" href="https://wa.me/2250700000000">💬 Commander WhatsApp</a>
+<p style="margin-top:30px;font-size:11px;color:#aaa">Orange Blanc Vert - Fait main en Côte d'Ivoire</p>
+</body></html>`)});
+
+app.listen(PORT,()=>console.log('Boutique Ivoire LIVE'));
